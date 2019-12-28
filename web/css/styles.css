@@ -21,6 +21,10 @@ summary, hgroup {
   border: 0;
 }
 
+.fromhome{
+    margin-bottom:40px;
+}
+
 a:active,
 a:hover {
   outline: 0;

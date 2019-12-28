@@ -20,11 +20,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-p {
-	font-size: 13px;
-	color: #7a7a7a;
-	line-height: 22px;
-}
 
 .primary-button a {
 	text-decoration: none;
@@ -180,7 +175,7 @@ p {
 =======================*/
 
 .fourth-section {
-	padding: 100px 0px;
+	padding: 70px 0px;
 }
 
 .fourth-section .service-item {
