@@ -43,9 +43,20 @@ body, html {
 
 
 
+.article{
+	max-width: 100%;
+	padding: 5%;
+	margin-top: 60px;
+}
 
+.article-header{
+	max-width: 100%;
+}
 
-
+.article-body{
+	max-width: 100%;
+	font-size: 1.5rem;
+}
 
 .footer-distributed{
 	background-color: #b30059;
