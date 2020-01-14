@@ -11,12 +11,10 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'controllerMap' => require 'controllers.php',
-    'layout' => '@app/web/views/layouts/main',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'TFYKJsF-Y-c6MlimDcPdA2pFd4QKIK-f',
+            'cookieValidationKey' => 'ktUTu7P7SjU1_I0aIOG-D8KbFtPeFf93',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -45,22 +43,22 @@ $config = [
             ],
         ],
         'db' => $db,
-        'view' => [
-					'class' => 'yii\web\View',
-					'renderers' => [
-						'mustache' => 'yii\mustache\ViewRenderer'
-					]
-				],
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-							'<controller:(joke)>/<action:(create_view)>' => '<controller>/<action>',
-							'<controller:(joke)>/<action:(update_view)>' => '<controller>/<action>',
-							'<controller:(joke)>/<action:(create|list|delete|update)>' => '<controller>/<action>',
+            	'' => 'site/index',
+            	'<controller:(site)>/<action:(parceiros)>' => '<controller>/<action>',
+            	'<controller:(site)>/<action:(como-ajudar)>' => '<controller>/<action>',
             ],
         ],
-        
+        'view' => [
+		  'class' => 'yii\web\View',
+		  'renderers' => [
+			'mustache' => 'yii\mustache\ViewRenderer'
+		  ]
+		],
     ],
     'params' => $params,
 ];
