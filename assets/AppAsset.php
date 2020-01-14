@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
     public $css = [
     	'css/bootstrap.min.css',
         'css/style.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+        'fonts/font-awesome.min.css',
     ];
     public $js = [
     	'js/jquery-3.4.1.min.js',
