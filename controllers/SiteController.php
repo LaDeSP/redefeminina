@@ -19,6 +19,18 @@ class SiteController extends Controller{
     public function actionComoAjudar(){
         return $this->render('como-ajudar.mustache');
     }
+    
+    public function actionLutaContraOCancer(){
+        return $this->render('luta-contra-o-cancer.mustache');
+    }
+    
+    public function actionDepoimentos(){
+        return $this->render('depoimentos.mustache');
+    }
+    
+     public function actionContato(){
+        return $this->render('contato.mustache');
+    }
 
     
 }

@@ -49,8 +49,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             	'' => 'site/index',
-            	'<controller:(site)>/<action:(parceiros)>' => '<controller>/<action>',
-            	'<controller:(site)>/<action:(como-ajudar)>' => '<controller>/<action>',
+            	'<controller:(site)>/<action:(parceiros|luta-contra-o-cancer|como-ajudar|depoimentos|contato)>' => '<controller>/<action>',
             ],
         ],
         'view' => [
