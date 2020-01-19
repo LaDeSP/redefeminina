@@ -49,7 +49,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             	'' => 'site/index',
-            	'<controller:(site)>/<action:(parceiros|luta-contra-o-cancer|como-ajudar|depoimentos|contato)>' => '<controller>/<action>',
+            	'<controller:(site)>/<action:(parceiros|luta-contra-o-cancer|como-ajudar|depoimentos|contato|outubro-rosa)>' => '<controller>/<action>',
             ],
         ],
         'view' => [

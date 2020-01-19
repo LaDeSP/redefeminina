@@ -28,8 +28,12 @@ class SiteController extends Controller{
         return $this->render('depoimentos.mustache');
     }
     
-     public function actionContato(){
+    public function actionContato(){
         return $this->render('contato.mustache');
+    }
+    
+     public function actionOutubroRosa(){
+        return $this->render('outubro-rosa.mustache');
     }
 
     
