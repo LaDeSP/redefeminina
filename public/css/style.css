@@ -96,6 +96,11 @@ body, html {
 	margin-left: 3px;
 }
 
+.btn-pink {
+    background-color: #b30059;
+    color: white;
+}
+
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 600px) {

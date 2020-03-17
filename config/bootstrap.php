@@ -2,12 +2,16 @@
 
 use DI\ContainerBuilder;
 use Slim\App;
+use Slim\Csrf\Guard;
+use Slim\Factory\AppFactory;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../vendor/redbean/rb.php';
+require_once __DIR__ . '/../vendor/RedBeanPHP5_4_2/rb.php';
 require __DIR__ . '/../vendor/mustache/mustache/src/Mustache/Autoloader.php';
 Mustache_Autoloader::register();
 
+// Start PHP session
+session_start();
 
 $containerBuilder = new ContainerBuilder();
 
