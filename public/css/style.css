@@ -19,6 +19,9 @@ body, html {
 	color: white;
 }
 
+.banner h1 {
+  color: #b37983;
+}
 
 .sec-top .container {
 	padding-left: 9%;
