@@ -1,16 +1,12 @@
 <?php
 
 use Psr\Container\ContainerInterface;
-use Selective\Config\Configuration;
 use Slim\App;
 use Slim\Factory\AppFactory;
-
-
+use Parsedown;
+use App\Services\PageContentService;
 
 return [
-    Configuration::class => function () {
-        return new Configuration(require __DIR__ . '/settings.php');
-    },
 
     App::class => function (ContainerInterface $container) {
         AppFactory::setContainer($container);
@@ -23,13 +19,30 @@ return [
         return $app;
     },
     
-	R::class => DI\create(R::class),
+    PageContentService::class => function (ContainerInterface $container) {
+		return new PageContentService(__DIR__."/../");
+	},
 	
 	Mustache_Engine::class => function (ContainerInterface $container) {
-		$config =  $container->get(Configuration::class)->getArray('view');
 		
-		
-		return new Mustache_Engine($config);
+		return new Mustache_Engine(
+			array(
+				'template_class_prefix' => '__MyTemplates_',
+				'cache' => __DIR__.'/../tmp/cache/mustache',
+				#'cache_file_mode' => 0666, // Please, configure your umask instead of doing this :)
+				#'cache_lambda_templates' => true,
+				'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/../templates'),
+				'partials_loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/../templates'),
+				#'helpers' => array('i18n' => function($text) {}),
+				'escape' => function($value) {
+					$value = (new Parsedown())->text($value);
+					return html_entity_decode($value, ENT_COMPAT, 'UTF-8');
+				},
+				#'charset' => 'ISO-8859-1',
+				#'logger' => new Mustache_Logger_StreamLogger('php://stderr'),
+				#'strict_callables' => true,
+				'pragmas' => [Mustache_Engine::PRAGMA_FILTERS]
+			)
+		);
 	},
 ];
-

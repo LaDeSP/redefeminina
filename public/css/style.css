@@ -5,11 +5,10 @@ body, html {
 
 .banner{
 	/* The image used */
-	background-image: url("../img/banner01.png");
-
+	background-image: url("../img/banner01.jpg");
 	/* Full height */
 	height: 100%; 
-
+	opacity: 0.9;
 	/* Center and scale the image nicely */
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,45 +20,49 @@ body, html {
 }
 
 
+.sec-top .container {
+	padding-left: 9%;
+	padding-right: 9%;
+}
 	
 @media (max-width: 768px) { 
 	.banner-text{
-		color: #800040;
+		color: white;
 	}
 	
 	.banner{
-	/* The image used */
-	background-image: url("../img/banner01.png");
+		/* The image used */
+		background-image: url("../img/banner01.jpg");
 
-	/* Full height */
-	height: 50%; 
+		/* Full height */
+		height: 50%; 
 
-	/* Center and scale the image nicely */
-	background-repeat: no-repeat;
-	background-size: cover;
+		/* Center and scale the image nicely */
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 }
-}
 
-
-
-
-.article{
+.container p{
 	max-width: 100%;
-	padding: 7%;
-	margin-top: 50px;
+	font-size: 1.1rem;
+	margin-top: 20px;
 }
 
-.article-header{
-	max-width: 100%;
+.sec-top {
+	margin-top: 10%;
 }
 
-.article-body{
-	max-width: 100%;
-	font-size: 1.3rem;
+
+.container h2 {
+	margin-top: 5%;
 }
+
+
 
 .footer-distributed{
-	background-color: #b30059;
+	background-color: #ffdbe6;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -67,11 +70,11 @@ body, html {
 	font: normal 16px sans-serif;
 
 	padding: 45px 50px;
-	margin-top: 80px;
+	margin-top: 15%;
 }
 
 .footer-distributed .footer-left p{
-	color:  #ff99cc;
+	color:  white;
 	font-size: 14px;
 	margin-top: 10px;
 }
@@ -85,11 +88,11 @@ body, html {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	background-color:  #ff0080;
+	background-color:  #f1b3be;
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #ffffff;
+	color: white;
 	text-align: center;
 	line-height: 35px;
 
@@ -109,7 +112,7 @@ body, html {
 	.footer-distributed .footer-right{
 		text-align: center;
 	}
-
+	
 	.footer-distributed .footer-right{
 		float: none;
 		margin: 0 auto 20px;
