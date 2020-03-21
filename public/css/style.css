@@ -19,9 +19,7 @@ body, html {
 	color: white;
 }
 
-.banner h1 {
-  color: #b37983;
-}
+
 
 .sec-top .container {
 	padding-left: 9%;
@@ -65,7 +63,7 @@ body, html {
 
 
 .footer-distributed{
-	background-color: #ffdbe6;
+	background-color: #FFA9E0;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -91,7 +89,7 @@ body, html {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	background-color:  #f1b3be;
+	background-color: #FF75CD;
 	border-radius: 2px;
 
 	font-size: 20px;
