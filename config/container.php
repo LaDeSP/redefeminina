@@ -3,7 +3,6 @@
 use Psr\Container\ContainerInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;
-use Parsedown;
 use App\Services\PageContentService;
 
 return [
@@ -18,13 +17,13 @@ return [
 
         return $app;
     },
-    
+
     PageContentService::class => function (ContainerInterface $container) {
 		return new PageContentService(__DIR__."/../");
 	},
-	
+
 	Mustache_Engine::class => function (ContainerInterface $container) {
-		
+
 		return new Mustache_Engine(
 			array(
 				'template_class_prefix' => '__MyTemplates_',

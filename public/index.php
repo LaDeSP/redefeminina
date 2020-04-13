@@ -17,7 +17,7 @@ session_start();
 
 //Loading .env variables
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/../");
-$dotenv->load(); 
+$dotenv->load();
 
 $containerBuilder = new ContainerBuilder();
 

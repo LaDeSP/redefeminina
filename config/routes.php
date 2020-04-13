@@ -15,9 +15,12 @@ return function (App $app) {
     $app->get('/luta_contra_cancer', \App\AcessoPublico\View\LutaContraCancer::class);
     $app->get('/outubro_rosa', \App\AcessoPublico\View\OutubroRosa::class);
     $app->get('/como_ajudar', \App\AcessoPublico\View\ComoAjudar::class);
-	
-	
-	
+    $app->get('/test', function (Request $request, Response $response) {
+           $response->getBody()->write("Hello, Todo");
+           return $response;
+       });
+
+
 	/**
 	 *AREA RESTRITA
 	 *

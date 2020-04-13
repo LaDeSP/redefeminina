@@ -12,7 +12,7 @@ final class Home
 {
 	private $m;
 	private $getpage;
-	
+
 	public function __construct(Mustache_Engine $m, PageContentService $getpage)
     {
     	$this->m = $m;
@@ -20,15 +20,14 @@ final class Home
     }
 
     public function __invoke(ServerRequest $request, Response $response): Response
-    {	
-    	$result = $this->m->render("acesso_publico/index.mustache",
+    {
+    	$result = $this->m->render("acesso_publico/home.mustache",
 			array(
 				"quemSomos" => $this->getpage->get(getenv("PATH_TO_PAGES")."home.md")
 				)
     	);
-    	
+
     	$response->getBody()->write($result);
         return $response;
     }
 }
-
