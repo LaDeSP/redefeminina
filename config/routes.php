@@ -9,7 +9,6 @@ return function (App $app) {
 	 *AREA DE ACESSO AO PUBLICO
 	 */
     $app->get('/', \App\AcessoPublico\View\Home::class);
-    $app->get('/parceiros', \App\AcessoPublico\View\Parceiros::class);
     $app->get('/depoimentos', \App\AcessoPublico\View\Depoimentos::class);
     $app->get('/contato', \App\AcessoPublico\View\Contato::class);
     $app->get('/luta_contra_cancer', \App\AcessoPublico\View\LutaContraCancer::class);
