@@ -9,7 +9,6 @@ class ObjectMapperService {
      foreach($objectBeingMapped as $property => $value) {
         $objGoal->$property = $value;
      }
-
      return $objGoal;
 	}
 
